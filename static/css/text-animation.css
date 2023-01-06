@@ -1,0 +1,10 @@
+h1 {
+    font-size: 15rem;
+    background: linear-gradient(to right, #ff00cc, #333399);
+    -webkit-background-clip: text;
+    background-clip: text;;
+    -webkit-text-fill-color: transparent;
+    animation: fade-in 1s ease.5s forwards;
+    pointer-events: none;
+    opacity: 0;
+}

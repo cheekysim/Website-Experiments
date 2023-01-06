@@ -1,0 +1,17 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 45vw;
+    height: 40vh;
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+}

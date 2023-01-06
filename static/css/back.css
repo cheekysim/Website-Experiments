@@ -1,0 +1,28 @@
+.back {
+    border-radius:100%;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, 0.5);
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    transition: all 0.5s ease;
+    color: var(--color-text);
+}
+
+.back:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1.5rem 0 hsla(0, 0%, 0%, 0.5);
+    font-size:250%;
+}
+
+
+.back::before {
+    content: "<"
+}

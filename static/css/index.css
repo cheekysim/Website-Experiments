@@ -1,0 +1,79 @@
+:root {
+    --title-text-opacity: 0.8;
+    --color-text: hsl(10, 20%, 40%);
+}
+
+h1 {
+    animation: fade-in-top 1s ease 0.5s forwards;
+    pointer-events: none;
+    opacity: 0;
+    grid-row: 1;
+    align-self: end;
+    text-shadow: 0 0 0.1em black;
+}
+
+h6 {
+    animation: fade-in 1s ease 0.8s forwards;
+    pointer-events: none;
+    opacity: 0;
+    grid-row: 2;
+    align-self: start;
+    text-shadow: 0 0 0.1em black;
+}
+
+.title {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    grid-template-rows: 50fr 45fr;;
+}
+
+.img-background {
+    background: linear-gradient(
+        transparent,
+        var(--color-tertiary) 95%
+    ),url(https://picsum.photos/seed/9/1920/1080);
+    background-size: cover;
+    background-position: center;
+
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        margin-top: 15rem;
+        transform: scale(0.9)
+    }
+    75% {
+        margin-top: 0;
+    }   
+    85% {
+        transform: scale(1)
+    }
+    100% {
+        opacity: var(--title-text-opacity);
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        margin-bottom: 15rem;
+        transform: scale(0.9)
+    }
+    75% {
+        margin-bottom: 0;
+    }   
+    85% {
+        transform: scale(1)
+    }
+    100% {
+        opacity: var(--title-text-opacity);
+    }
+}

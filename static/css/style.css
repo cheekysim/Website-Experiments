@@ -1,0 +1,117 @@
+:root {
+    --color-primary: hsl(30, 30%, 35%);
+    --color-secondary: hsl(30, 30%, 20%);
+    --color-tertiary: hsl(30, 30%, 15%);
+    --color-text: hsl(0, 0%, 70%);
+    --scrollbar-width: 1rem;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+body {
+    width: calc(100vw - var(--scrollbar-width));
+    height: fit-content;
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    scroll-behavior: smooth;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - var(--scrollbar-width));
+    height: 100vh;;
+    min-width: fit-content;
+    min-height: fit-content;
+    scroll-snap-align: start;
+}
+
+h1 {
+    font-size: 10rem;
+    color: var(--color-text);
+}
+
+h2 {
+    font-size: 7rem;
+    color: var(--color-text);
+}
+
+h3 {
+    font-size: 6rem;
+    color: var(--color-text);
+}
+
+h4 {
+    font-size: 5rem;
+    color: var(--color-text);
+}
+
+h5 {
+    font-size: 4rem;
+    color: var(--color-text);
+}
+
+h6 {
+    font-size: 3rem;
+    color: var(--color-text);
+}
+
+p {
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+input {
+    color: var(--color-text);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.hover-grow {
+    transition: transform 0.5s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.1)
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10rem;
+}
