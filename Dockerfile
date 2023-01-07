@@ -5,7 +5,7 @@ FROM python:3.11-bullseye
 WORKDIR /root/app
 
 COPY requirements.txt requirements.txt
-RUN pip3 install --no-input -r requirements.txt
+RUN pip3 install --no-input -r requirements.txt && pip3 install --no-input gunicorn
 
 COPY . .
 
