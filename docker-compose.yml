@@ -1,6 +1,6 @@
 version: '3'
 services:
-  app:
+  web-experiments:
     container_name: web-experiments
     pull_policy: build
     build: .
