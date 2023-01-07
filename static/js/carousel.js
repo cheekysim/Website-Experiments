@@ -10,7 +10,6 @@ async function fetchCarousels() {
               if (xhr.readyState === XMLHttpRequest.DONE) {
                   if (xhr.status === 200) {
                       data = JSON.parse(xhr.responseText);
-                      console.log(data);
                       for (let carouselName in data) {
                         carouselElement = document.createElement("div");
                         carouselElement.className = "carousel flex";
