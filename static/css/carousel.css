@@ -36,5 +36,7 @@ img {
     width: auto;
     height: 90%;
     border: 5px solid black;
-    scroll-snap-align: center;;
+    scroll-snap-align: center;
+    opacity: 0;
+    transition: all 0.5s ease;
 }

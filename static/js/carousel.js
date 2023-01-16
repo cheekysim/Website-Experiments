@@ -20,6 +20,7 @@ async function fetchCarousels() {
                             imageElement = document.createElement("img");
                             imageElement.src = `/static/images/carousels/${carouselName}/${data[carouselName][image]}`;
                             carousel.appendChild(imageElement);
+                            imageElement.style.opacity = 1;
                         }
                       }
                   } else {
