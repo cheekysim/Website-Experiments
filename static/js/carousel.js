@@ -17,8 +17,9 @@ async function fetchCarousels() {
                         document.getElementById("carousel-container").appendChild(carouselElement);
                         let carousel = document.getElementById(carouselName);
                         for (let image in data[carouselName]) {
-                            imageElement = document.createElement("img", {is: "lazy-image"});
+                            imageElement = document.createElement("img");
                             imageElement.src = `/static/images/carousels/${carouselName}/${data[carouselName][image]}`;
+                            imageElement.alt = data[carouselName][image];
                             carousel.appendChild(imageElement);
                             imageElement.style.opacity = 1;
                         }
