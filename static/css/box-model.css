@@ -111,7 +111,7 @@
 }
 
 @keyframes background-out {
-    10% {
+    20% {
         background-color: hsl(0, 0%, 80%);
     }
     40% {
