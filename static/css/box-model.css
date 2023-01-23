@@ -1,0 +1,151 @@
+.wrapper {
+    position: relative;
+    width: 40rem;
+    height: 40rem;
+}
+
+.item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 2s all ease-in-out;
+}
+
+/* Content */
+.item-1 {
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+    z-index: 6;
+}
+
+.item-1 > h5,
+.item-1 > p {
+    color: black;
+    transition: 1.5s all ease-in-out;
+}
+
+/* Padding */
+.item-2 {
+    background: repeating-linear-gradient(
+        -45deg, 
+        cyan, cyan 1px, 
+        rgba(255, 255, 254, 0.05) 1px, rgba(255, 255, 254, 0.05) 10px
+      );
+      -webkit-clip-path: polygon(
+        0% 0%, 0% 100%, 
+        5vmin 100%, 5vmin 5vmin, 
+        calc(100% - 5vmin) 5vmin, 
+        calc(100% - 5vmin) calc(100% - 5vmin), 
+        5vmin calc(100% - 5vmin), 5vmin 100%, 
+        100% 100%, 100% 0%
+      );
+              clip-path: polygon(
+        0% 0%, 0% 100%, 
+        5vmin 100%, 5vmin 5vmin, 
+        calc(100% - 5vmin) 5vmin, 
+        calc(100% - 5vmin) calc(100% - 5vmin), 
+        5vmin calc(100% - 5vmin), 5vmin 100%, 
+        100% 100%, 100% 0%
+      );
+    opacity: 0;
+    z-index: 5;
+}
+
+/* Border */
+.item-3 {
+    border: 1rem solid black;
+    z-index: 4;
+}
+
+/* Background */
+.item-4 {
+    background-color: hsl(0, 0%, 80%);
+    z-index: 3;
+}
+
+/* Shadow */
+.item-5 {
+    background-color: hsl(0, 0%, 15%);
+    box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.item-4.animation-on {
+    animation: background-in 2s ease-in-out forwards;
+}
+
+.item-4.animation-off{
+    animation: background-out 2s ease-in-out;
+}
+
+@keyframes background-in {
+    0% {
+        background-color: hsl(0, 0%, 80%);
+    }
+    30% {
+        background-color: hsl(0, 0%, 15%);
+    }
+    90% {
+        background-color: hsl(0, 0%, 80%);
+    }
+}
+
+@keyframes background-out {
+    10% {
+        background-color: hsl(0, 0%, 80%);
+    }
+    70% {
+        background-color: hsl(0, 0%, 15%);
+    }
+    100% {
+        background-color: hsl(0, 0%, 80%);
+    }
+}
+
+.wrapper:hover > .item-1 > h5,
+.wrapper:hover > .item-1 > p {
+    color: white;
+}
+
+.wrapper:hover > .item-1 {
+    transform:
+    rotateX(50deg)
+    rotateZ(45deg)
+    translateZ(30rem);
+}
+
+.wrapper:hover > .item-2 {
+    transform:
+    rotateX(50deg)
+    rotateZ(45deg)
+    translateZ(15rem);
+    opacity: 100%;
+}
+
+.wrapper:hover > .item-3 {
+    transform:
+    rotateX(50deg)
+    rotateZ(45deg)
+    translateZ(0rem);
+    border-color: purple;
+}
+
+.wrapper:hover > .item-4 {
+    transform:
+    rotateX(50deg)
+    rotateZ(45deg)
+    translateZ(-15rem);
+}
+
+.wrapper:hover > .item-5 {
+    transform:
+    rotateX(50deg)
+    rotateZ(45deg)
+    translateZ(-30rem);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
