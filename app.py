@@ -43,5 +43,9 @@ def htest():
 def grid1():
     return render_template('grid-1.html')
 
+@app.route('/box-model', methods=['GET'])
+def boxmodel():
+    return render_template('box-model.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
