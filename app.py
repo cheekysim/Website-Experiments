@@ -27,7 +27,7 @@ def carousel():
                     data[folder].append(file)
                 else:
                     img = Image.open(f'static/images/carousels/{folder}/{file}')
-                    img.thumbnail((400, 400))
+                    img.thumbnail((250, 250))
                     img.save(f'static/images/carousels/{folder}/{file.split(".")[0]}.webp', 'WEBP')
                     data[folder].append(f'{file.split(".")[0]}.webp')
                     os.remove(f'static/images/carousels/{folder}/{file}')
