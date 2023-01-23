@@ -1,3 +1,7 @@
+:root {
+    --frame-width: 3rem;
+}
+
 .wrapper {
     position: relative;
     width: 40rem;
@@ -8,7 +12,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: 2s all ease-in-out;
+    transition: 2s transform cubic-bezier(0.7, 0, 0.3, 1),
+    2s opacity cubic-bezier(0.7, 0, 0.3, 1),
+    2s box-shadow cubic-bezier(0.7, 0, 0.3, 1),
+    2s border cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 /* Content */
@@ -33,43 +40,54 @@
         cyan, cyan 1px, 
         rgba(255, 255, 254, 0.05) 1px, rgba(255, 255, 254, 0.05) 10px
       );
-      -webkit-clip-path: polygon(
+      /* -webkit-clip-path: polygon(
         0% 0%, 0% 100%, 
         5vmin 100%, 5vmin 5vmin, 
         calc(100% - 5vmin) 5vmin, 
         calc(100% - 5vmin) calc(100% - 5vmin), 
         5vmin calc(100% - 5vmin), 5vmin 100%, 
         100% 100%, 100% 0%
-      );
-              clip-path: polygon(
-        0% 0%, 0% 100%, 
-        5vmin 100%, 5vmin 5vmin, 
-        calc(100% - 5vmin) 5vmin, 
-        calc(100% - 5vmin) calc(100% - 5vmin), 
-        5vmin calc(100% - 5vmin), 5vmin 100%, 
-        100% 100%, 100% 0%
-      );
+      ); */
+      clip-path: polygon(
+        0% 0%,
+        0% 100%,
+        calc(0% + var(--frame-width)) 100%,
+        calc(0% + var(--frame-width)) calc(0% + var(--frame-width)),
+        calc(100% - var(--frame-width)) calc(0% + var(--frame-width)),
+        calc(100% - var(--frame-width)) calc(100% - var(--frame-width)),
+        calc(0% + var(--frame-width)) calc(100% - var(--frame-width)),
+        calc(0% + var(--frame-width)) 100%,
+        100% 100%,
+        100% 0%
+        );
+
     opacity: 0;
     z-index: 5;
+    transition-delay: 0.1s;
 }
 
 /* Border */
 .item-3 {
     border: 1rem solid black;
     z-index: 4;
+    transition-delay: 0.2s;
 }
 
 /* Background */
 .item-4 {
+    transform: scale(0.95);
     background-color: hsl(0, 0%, 80%);
     z-index: 3;
+    transition-delay: 0.3s;
 }
 
 /* Shadow */
 .item-5 {
+    transform: scale(0.95);
     background-color: hsl(0, 0%, 15%);
-    box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 5rem 1rem rgba(0, 0, 0, 0.7);
     z-index: 2;
+    transition-delay: 0.4s;
 }
 
 .item-4.animation-on {
@@ -93,10 +111,10 @@
 }
 
 @keyframes background-out {
-    10% {
+    20% {
         background-color: hsl(0, 0%, 80%);
     }
-    70% {
+    40% {
         background-color: hsl(0, 0%, 15%);
     }
     100% {
@@ -134,6 +152,7 @@
 
 .wrapper:hover > .item-4 {
     transform:
+    scale(1)
     rotateX(50deg)
     rotateZ(45deg)
     translateZ(-15rem);
@@ -141,9 +160,11 @@
 
 .wrapper:hover > .item-5 {
     transform:
+    scale(1)
     rotateX(50deg)
     rotateZ(45deg)
     translateZ(-30rem);
+    box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
 }
 
 ::-webkit-scrollbar {
