@@ -25,6 +25,7 @@
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr;
     z-index: 6;
+    transition-delay: 0.4s;
 }
 
 .item-1>h5,
@@ -59,7 +60,7 @@
 
     opacity: 0;
     z-index: 5;
-    transition-delay: 0.1s;
+    transition-delay: 0.3s;
 }
 
 /* Border */
@@ -74,7 +75,7 @@
     transform: scale(0.95);
     background-color: hsl(0, 0%, 80%);
     z-index: 3;
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 /* Shadow */
@@ -83,7 +84,7 @@
     background-color: hsl(0, 0%, 15%);
     box-shadow: 0 0 5rem 1rem rgba(0, 0, 0, 0.7);
     z-index: 2;
-    transition-delay: 0.4s;
+    transition-delay: 0s;
 }
 
 .item-4.animation-on {
@@ -130,29 +131,34 @@
 .wrapper:hover>.item-1 {
     transform:
         rotateX(50deg) rotateZ(45deg) translateZ(30rem);
+    transition-delay: 0s;
 }
 
 .wrapper:hover>.item-2 {
     transform:
         rotateX(50deg) rotateZ(45deg) translateZ(15rem);
     opacity: 100%;
+    transition-delay: 0.1s;
 }
 
 .wrapper:hover>.item-3 {
     transform:
         rotateX(50deg) rotateZ(45deg) translateZ(0rem);
     border-color: purple;
+    transition-delay: 0.2s;
 }
 
 .wrapper:hover>.item-4 {
     transform:
         scale(1) rotateX(50deg) rotateZ(45deg) translateZ(-15rem);
+    transition-delay: 0.3s;
 }
 
 .wrapper:hover>.item-5 {
     transform:
         scale(1) rotateX(50deg) rotateZ(45deg) translateZ(-30rem);
     box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
+    transition-delay: 0.4s;
 }
 
 ::-webkit-scrollbar {
