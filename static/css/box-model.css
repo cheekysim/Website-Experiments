@@ -81,8 +81,13 @@
 /* Shadow */
 .item-5 {
     transform: scale(0.95);
+<<<<<<< HEAD
+    background-color: hsl(0, 0%, 10%);
+    box-shadow: 0 0 5rem 2rem hsla(0, 0%, 10%, 1);
+=======
     background-color: hsl(0, 0%, 15%);
     box-shadow: 0 0 5rem 1rem rgba(0, 0, 0, 0.7);
+>>>>>>> 6103f28e6afe3c45212eec9bfa6d23af97fab657
     z-index: 2;
     transition-delay: 0s;
 }
@@ -157,7 +162,11 @@
 .wrapper:hover>.item-5 {
     transform:
         scale(1) rotateX(50deg) rotateZ(45deg) translateZ(-30rem);
+<<<<<<< HEAD
+    box-shadow: 0 0 5rem 1rem hsla(0, 0%, 10%, 1);
+=======
     box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.7);
+>>>>>>> 6103f28e6afe3c45212eec9bfa6d23af97fab657
     transition-delay: 0.4s;
 }
 
